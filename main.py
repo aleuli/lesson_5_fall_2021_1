@@ -1,19 +1,20 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import json
+from typing import Union
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+import requests
+
+import docstring
 
 
-# Press the green button in the gutter to run the script.
+
+INDENT = 4
+
+# def main():
+#     print(print_JSON_string([1, 2, 3]))
+
+def print_JSON_string(obj: Union[list, dict]) -> str:
+    return json.dumps(obj, indent=INDENT)
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
-
-
-print("Hello")
+    print(print_JSON_string([1, 2, 3]))
